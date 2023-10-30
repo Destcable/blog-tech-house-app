@@ -15,7 +15,7 @@ export default {
 
 <template>
   <HeaderComponent />
-  <div class="w-100 d-flex justify-content-center">
+  <div class="w-100 d-flex justify-content-center mt-5">
     <CardComponent />
   </div>
 </template>

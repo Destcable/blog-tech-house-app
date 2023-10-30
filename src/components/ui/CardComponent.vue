@@ -5,7 +5,7 @@ export default{
 </script>
 
 <template>
-    <div class="card text-center" style="width: 30rem;">
+    <div class="card text-center" style="width: 40rem;">
         <img  class="card-img-top">
         <div class="card-body">
             <p class="text-danger">ДОМАШНИЕ РАСТЕНИЯ</p>
