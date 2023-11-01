@@ -8,7 +8,7 @@ export default{
 </script>
 
 <template>
-    <div class="card text-center" style="width: 40rem;">
+    <div class="card border-0 shadow-sm mb-5 text-center" style="width: 40rem;">
         <img  class="card-img-top">
         <div class="card-body">
             <p class="text-danger">{{ category_name }}</p>

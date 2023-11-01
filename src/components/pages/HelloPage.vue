@@ -25,28 +25,30 @@ export default {
 </script>
 
 <template>
-  <HeaderComponent />
-  <div class="container">
-    <div class="row justify-content-center">
-      
-      <div class="col">
-        <div v-for="(item, index) in items" :key="index" class="">
-            <CardComponent 
-              :category_name=" 'ДОМАШНИЕ ' + item.category_name " 
-            />
-        </div>
-      </div>
+  <div class="welcome-page">
+    <HeaderComponent />
+    <div class="container">
+      <div class="row justify-content-center">
 
-      <div class="col">
-        <div class="d-flex">
-          <CategoriesComponent 
-            
-          />
+        <div class="col">
+          <div v-for="(item, index) in items" :key="index" class="">
+            <CardComponent :category_name="'ДОМАШНИЕ ' + item.category_name" />
+          </div>
         </div>
-      </div>
 
+        <div class="col">
+          <div class="d-flex">
+            <CategoriesComponent />
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.welcome-page {
+  background-color: #F5F5F5;
+}
+</style>
