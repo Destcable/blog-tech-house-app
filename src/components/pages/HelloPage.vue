@@ -15,9 +15,9 @@ export default {
   data() {
     return {
       items: [
-        { id: 1, category_name: "ДОМАШНИЕ РАСТЕНИЯ" },
-        { id: 2, category_name: "ДОМАШНИЕ СТОЛЫ" },
-        { id: 3, category_name: "ДОМАШНИЕ СТУЛЬЯ" },
+        { id: 1, category_name: "РАСТЕНИЯ" },
+        { id: 2, category_name: "СТОЛЫ" },
+        { id: 3, category_name: "СТУЛЬЯ" },
       ]
     }
   }
@@ -31,12 +31,18 @@ export default {
       
       <div class="col">
         <div v-for="(item, index) in items" :key="index" class="">
-            <CardComponent :category_name="item.category_name" />
+            <CardComponent 
+              :category_name=" 'ДОМАШНИЕ ' + item.category_name " 
+            />
         </div>
       </div>
 
       <div class="col">
-          <CategoriesComponent />
+        <div class="d-flex">
+          <CategoriesComponent 
+            
+          />
+        </div>
       </div>
 
     </div>
