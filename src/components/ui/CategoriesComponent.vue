@@ -15,7 +15,7 @@ export default {
             <small class="ms-3 me-3">РУБРИКИ</small>
         </div>
         <div class="d-grid gap-2">
-            <span>Цветы</span>
+            <span>Растения</span>
             <div class="separator"></div>
             <span>Столы</span>
             <div class="separator"></div>

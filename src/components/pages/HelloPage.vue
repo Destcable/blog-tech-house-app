@@ -28,20 +28,15 @@ export default {
   <div class="welcome-page">
     <HeaderComponent />
     <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col">
-          <div v-for="(item, index) in items" :key="index" class="">
+      <div class="d-flex justify-content-center row">
+        <div class="col-md-8 w-50">
+          <div v-for="(item, index) in items" :key="index">
             <CardComponent :category_name="'ДОМАШНИЕ ' + item.category_name" />
           </div>
         </div>
-
-        <div class="col">
-          <div class="d-flex">
-            <CategoriesComponent />
-          </div>
+        <div class="col-md-3">
+          <CategoriesComponent />
         </div>
-
       </div>
     </div>
   </div>
