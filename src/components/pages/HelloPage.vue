@@ -20,7 +20,7 @@ export default {
         { id: 3, category_name: "СТУЛЬЯ", title: "title3", created_at: "04.11.2023", text: "hasellus nulla augue, dictum vel faucibus faucibus, pharetra nec dui. Cras et fermentum enim. Praesent vehicula lacus non libero volutpat, sed sodales mauris iaculis. Ut elit magna, ornare non pellentesque eu, auctor ut orci. Aliquam vitae fermentum urna" },
       ]
     }
-  }
+  },
 }
 </script>
 

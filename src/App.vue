@@ -14,4 +14,8 @@ export default {
 </template>
 
 <style>
+::selection {
+  background-color: red; /* Цвет фона выделения */
+  color: white; /* Цвет текста в выделении */
+}
 </style>
