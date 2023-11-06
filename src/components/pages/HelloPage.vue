@@ -1,7 +1,7 @@
 <script>
 import getPosts from "../api/getPosts";
 import transformResponsePosts from "../utils/transformResponse/transformResponsePosts"
-import sortByDateDescending from "../utils/sortByDateDescending"
+// import sortByDateDescending from "../utils/sortByDateDescending"
 import HeaderComponent from "../ui/HeaderComponent.vue";
 import CardComponent from "../ui/CardComponent.vue";
 import CategoriesComponent from "../ui/CategoriesComponent.vue";
@@ -23,11 +23,12 @@ export default {
   },
   mounted() {
     getPosts()
-      .then(response =>{ 
-        this.items = sortByDateDescending(
-          transformResponsePosts(response.data), 'created_at'
-        )
-      });
+      .then(response => {
+        response.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        this.items = transformResponsePosts(response.data);
+      })
+      .catch(reason => console.error(reason))
   }
 }
 </script>
