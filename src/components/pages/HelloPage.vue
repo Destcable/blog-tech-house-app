@@ -1,5 +1,6 @@
 <script>
 import getPosts from "../api/getPosts";
+import transformResponsePosts from "../utils/transformResponse/transformResponsePosts"
 import HeaderComponent from "../ui/HeaderComponent.vue";
 import CardComponent from "../ui/CardComponent.vue";
 import CategoriesComponent from "../ui/CategoriesComponent.vue";
@@ -20,7 +21,7 @@ export default {
   },
   mounted() {
     getPosts()
-      .then(response => { this.items = response.data });
+      .then(response => this.items = transformResponsePosts(response.data) );
   }
 }
 </script>
@@ -32,12 +33,8 @@ export default {
       <div class="d-flex justify-content-center row">
         <div class="col-md-8 w-50">
           <div v-for="(item, index) in items" :key="index">
-            <CardComponent 
-              :title="item.title"
-              category_name="ДОМАШНИЕ РАСТЕНИЯ"
-              :created_at="item.created_at"
-              :text="item.body"
-            />
+            <CardComponent :title="item.title" category_name="ДОМАШНИЕ РАСТЕНИЯ" :created_at="item.created_at"
+              :text="item.body" />
           </div>
         </div>
         <div class="col-md-3">
