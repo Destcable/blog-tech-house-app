@@ -15,7 +15,7 @@ export default {
 
 <style>
 ::selection {
-  background-color: red; /* Цвет фона выделения */
-  color: white; /* Цвет текста в выделении */
+  background-color: red; 
+  color: white; 
 }
 </style>
