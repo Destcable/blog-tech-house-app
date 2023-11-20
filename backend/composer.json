@@ -1,0 +1,17 @@
+{
+    "name": "artem/house-backend",
+    "autoload": {
+        "psr-4": {
+            "APP\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Destcable",
+            "email": "artmobpavlov21@gmail.com"
+        }
+    ],
+    "require": {
+        "pecee/simple-router": "5.3.0.5"
+    }
+}

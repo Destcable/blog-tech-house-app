@@ -1,5 +1,5 @@
 <script>
-import Hello from './components/pages/HelloPage.vue';
+import Hello from './pages/HelloPage.vue';
 
 export default {
   name: 'App',
